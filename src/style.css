@@ -1,0 +1,63 @@
+:root{
+  --mobile: 375px;
+  --tablet: 768px;
+  --desktop: 1366px;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url("./assets/fonts/Outfit-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Outfit;
+  src: url("./assets/fonts/Outfit-Medium.ttf");
+  font-weight: 500;
+}
+
+body{
+  font-family: Outfit;
+  font-weight: 300;
+  background-color: #10141E;
+}
+
+
+
+/* slider */
+.swiper-button-prev,
+.swiper-button-next{
+    display: none!important;
+}
+@media (min-width: 1366px) {
+  .swiper-button-prev,
+  .swiper-button-next{
+    display: flex!important;
+    color: white!important;
+    height: 100%!important;
+    top: 0!important;
+    width: 50px!important;
+    margin-top: 0!important;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after{
+    font-size: 28px!important;
+  }
+  .swiper-button-prev{
+    left: 0!important;
+  }
+  .swiper-button-next{
+    right: 0!important;
+  }
+}
