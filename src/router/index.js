@@ -4,10 +4,11 @@ import Home from '../pages/Home.vue'
 import Movie from '../pages/Movie.vue'
 import Series from '../pages/Series.vue'
 import Bookmarked from '../pages/Bookmarked.vue'
+const BASE_URL = import.meta.env.BASE_URL
 
 const routes = [
     {
-        path: '/',
+        path: `${BASE_URL}`,
         name: 'home',
         meta: {
             placeholder: 'Search for movies or TV series'
@@ -15,7 +16,7 @@ const routes = [
         component: Home
     },
     {
-        path: '/movie',
+        path: `${BASE_URL}movie`,
         name: 'movie',
         meta: {
             placeholder: 'Search for movies'
@@ -23,7 +24,7 @@ const routes = [
         component: Movie
     },
     {
-        path: '/series',
+        path: `${BASE_URL}series`,
         name: 'series',
         meta: {
             placeholder: 'Search for TV series'
@@ -31,7 +32,7 @@ const routes = [
         component: Series
     },
     {
-        path: '/bookmarked',
+        path: `${BASE_URL}bookmarked`,
         name: 'bookmarked',
         meta: {
             placeholder: 'Search for bookmarked shows'

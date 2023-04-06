@@ -13,7 +13,7 @@ const props = defineProps(['movies', 'title'])
                     :rating="movie.rating"
                     :is-favorite="movie.bookmarked"
                     :title="movie.title"
-                    :poster="`/images/${movie.image}`"
+                    :poster="`images/${movie.image}`"
                     :id="movie.id"
             />
         </div>

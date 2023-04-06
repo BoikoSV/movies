@@ -2,12 +2,14 @@
 import {useMoviesStore} from '../stores/movies'
 const movieStore = useMoviesStore()
 const props = defineProps(['sliderItem', 'year', 'type', 'rating', 'isFavorite', 'title', 'poster', 'id'])
+
+const baseUrl = import.meta.env.BASE_URL
 </script>
 
 <template>
     <div :class="['card', {'slider-item': sliderItem}]">
         <div class="image-wrapper">
-            <img class="image" :src="poster" alt="">
+            <img class="image" :src="`${baseUrl}${poster}`" alt="">
             <div class="play">
                 <button class="button-play">
                     <div>
